@@ -20,3 +20,10 @@ steps:
     npm run build
     npm test
   displayName: 'npm install, build, and test'
+
+- task: AzSKSVTs@4
+  inputs:
+    ConnectedServiceNameARM: 'Visual Studio Enterprise - FTE(1f3fa5b1-87f2-46db-b7e5-6476891980e6)'
+    GenerateMethodParameterSetSelection: 'ResourceGroupName'
+    ResourceGroupName: 'myRGCLI'
+    SubscriptionId: '1f3fa5b1-87f2-46db-b7e5-6476891980e6'
